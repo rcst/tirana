@@ -11,7 +11,7 @@ output:
       highlightLanguage: ["r"]
       countIncrementalSlides: false
     includes:
-#      after_body: []
+      after_body: [insert-logo.html]
 ---
 
 ```{r setup, include=FALSE}

@@ -1,0 +1,35 @@
+---
+title: "Template Title"
+author: "Your Name"
+date: "The Date"
+output:
+  xaringan::moon_reader:
+    css: ["default", "tiranatransport.css", "tiranatransport-fonts.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+    includes:
+#      after_body: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+This is the introduction slide
+
+---
+
+# Analysis
+
+This is the analysis slide
+
+---
+
+# Conclusion
+
+This is the conclusion slide

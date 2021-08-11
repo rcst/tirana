@@ -13,6 +13,36 @@
 }
 </style>
 
+
+<style>
+
+.logo-container {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  text-align: left;
+  font-weight: bold;
+  display: block;
+}
+
+.logo-white {
+  position: relative;
+  display: block;
+  background-image: url(img/logow.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 316px;
+  height: 177px;
+}
+
+.logo-caption {
+  position: relative;
+  display: block;
+  width: 316px;
+}
+</style>
+
 <script>
 document
   .querySelectorAll(
@@ -24,5 +54,19 @@ document
   )
   .forEach(el => {
     el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    '.title-slide' +
+    // add additional classes to exclude here, e.g.
+    '.inverse' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+	  el.innerHTML += '<div class="logo-container"><div class="logo-white"></div><div class="logo-caption">Directorate of Transportation and Road Traffic</div></div>';
   });
 </script>

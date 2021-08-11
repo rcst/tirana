@@ -1,0 +1,17 @@
+.remark-slide-content h1 {
+  padding: 10px 0px 10px 12px;
+  border-left: 3px solid rgb(98, 166, 10);
+  color: rgb(206, 55, 40);
+}
+
+.inverse {
+  background-color: rgb(60, 55, 110);
+  color: rgb(247, 247, 247);
+}
+
+.title-slide h1 {
+  color: rgb(247, 247, 247);
+  border: none;
+  padding: 0px;
+}
+

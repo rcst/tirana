@@ -6,16 +6,21 @@ output:
   xaringan::moon_reader:
     css: ["default", "tiranatransport.css", "tiranatransport-fonts.css"]
     nature:
+      ratio: "16:9"
       highlightStyle: github
       highlightLines: true
-      highlightLanguage: ["r"]
+      # highlightLanguage: ["r"]
       countIncrementalSlides: false
+      titleSlideClass: [middle, right, inverse]
     includes:
       after_body: [insert-logo.html]
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(data.table)
+knitr::opts_chunk$set(echo = TRUE, 
+		      dpi = 300)
 ```
 
 # Introduction
@@ -27,6 +32,28 @@ This is the introduction slide
 # Analysis
 
 This is the analysis slide
+
+```{r}
+rnorm(10)
+```
+
+---
+
+# Visualizations
+
+.pull-left[
+```{r carsplot, fig.show = 'hide'}
+ggplot(data = mtcars, mapping = aes(x = mpg, y = hp, color = factor(cyl))) +
+  geom_point()
+```
+]
+
+.pull-right[
+```{r, echo = FALSE}
+knitr::include_graphics(
+			knitr::fig_chunk("carsplot", "png"))
+```
+]
 
 ---
 

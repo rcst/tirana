@@ -9,6 +9,11 @@ Authors@R:
 Description: This package delivers miscellaneaous useful functions and design templates for automatic and reproducible reporting to be used for working at Tirana Transportation and Road Traffic directorate. It containes a `xaringan` template and theme for creating interactive and easy to distribute `remark.js` slide shows.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
+Imports:
+    xaringan,
+    rmarkdown,
+    knitr,
+    devtools
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

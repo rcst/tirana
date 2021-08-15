@@ -14,18 +14,38 @@ output:
       titleSlideClass: [middle, right, inverse]
     includes:
       after_body: [insert-logo.html]
+params:
+  www: "https://rcst.netlify.app/doc/stats-training/07-computing-and-plotting-slides.pdf"
+  # www: "https://bit.ly/2VLCLR6"
 ---
 
 ```{r setup, include=FALSE}
 library(ggplot2)
 library(data.table)
+library(qrencoder)
 knitr::opts_chunk$set(echo = TRUE, 
 		      dpi = 300)
+
+# png("img/qr.png", width = 500, height = 500)
+# qrcode_gen(dataString = params$www)
+# dev.off()
+
+# generate qr code svg
+f <- file("img/qr.svg")
+writeLines(text = qrencode_svg(to_encode = params$www), con = f)
+close(f)
 ```
 
 # Introduction
 
 This is the introduction slide
+
+This presentation can be found under `r params$www`.
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/qr.svg")
+```
+
 
 ---
 

@@ -9,9 +9,32 @@
   color: rgb(247, 247, 247);
 }
 
-.title-slide h1 {
-  color: rgb(247, 247, 247);
-  border: none;
-  padding: 0px;
+/* title slide */
+/* .title-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+} */
+
+.title-slide .remark-slide-number {
+  display:none;
 }
 
+.title-slide > h1 {
+  color: rgb(247, 247, 247);
+  border-top: 5px solid rgb(206, 55, 40);
+  border-left: none;
+}
+
+.title-slide  h3:last-of-type {
+  border-bottom: 5px solid rgb(247, 247, 247);
+  padding-bottom: 10px;
+}
+
+/*-- CUSTOM CLASSES FOR TEXT EMPHASIS --*/
+.blue       { color:   rgb(60, 55, 110); }
+.green      { color:   rgb(98, 166, 10) }
+.pink       { color:   #AE2573 }
+.red        { color:   rgb(206, 55, 40); }
+.warmyellow { color:   #FFB81C }

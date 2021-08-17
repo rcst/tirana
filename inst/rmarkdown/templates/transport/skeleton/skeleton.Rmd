@@ -7,7 +7,7 @@ output:
     css: ["default", "tiranatransport.css", "tiranatransport-fonts.css"]
     nature:
       ratio: "16:9"
-      highlightStyle: github
+      # highlightStyle: github
       highlightLines: true
       # highlightLanguage: ["r"]
       countIncrementalSlides: false
@@ -15,8 +15,7 @@ output:
     includes:
       after_body: [insert-logo.html]
 params:
-  www: "https://rcst.netlify.app/doc/stats-training/07-computing-and-plotting-slides.pdf"
-  # www: "https://bit.ly/2VLCLR6"
+  www: "https://www.yourwebsite.com/thispresentation"
 ---
 
 ```{r setup, include=FALSE}
@@ -26,11 +25,7 @@ library(qrencoder)
 knitr::opts_chunk$set(echo = TRUE, 
 		      dpi = 300)
 
-# png("img/qr.png", width = 500, height = 500)
-# qrcode_gen(dataString = params$www)
-# dev.off()
-
-# generate qr code svg
+# generate qr code as svg
 f <- file("img/qr.svg")
 writeLines(text = qrencode_svg(to_encode = params$www), con = f)
 close(f)
@@ -40,7 +35,7 @@ close(f)
 
 This is the introduction slide
 
-This presentation can be found under `r params$www`.
+This presentation can be found under `r params$www`. Or by scanning this QR code.
 
 ```{r, echo=FALSE}
 knitr::include_graphics("img/qr.svg")
@@ -55,25 +50,23 @@ This is the analysis slide
 
 ```{r}
 rnorm(10)
+letters[1:10]
+rep("Hello Tirana!", 2)
 ```
 
 ---
 
 # Visualizations
 
-.pull-left[
-```{r carsplot, fig.show = 'hide'}
+```{r carsplot, fig.show = 'hide', echo = FALSE}
 ggplot(data = mtcars, mapping = aes(x = mpg, y = hp, color = factor(cyl))) +
-  geom_point()
+  geom_point() 
 ```
-]
 
-.pull-right[
 ```{r, echo = FALSE}
 knitr::include_graphics(
 			knitr::fig_chunk("carsplot", "png"))
 ```
-]
 
 ---
 

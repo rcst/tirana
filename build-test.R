@@ -1,9 +1,8 @@
-rmarkdown::render(input = "inst/rmarkdown/templates/tiranatransport-presentation/skeleton/skeleton.Rmd")
+rmarkdown::render(input = "inst/rmarkdown/templates/transport/skeleton/skeleton.Rmd")
 
 devtools::document()
 devtools::load_all()
 devtools::test()
-devtools::test(filter = "execute")
 devtools::build()
 devtools::check()
 

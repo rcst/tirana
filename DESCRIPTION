@@ -1,19 +1,20 @@
-Package: tiranatransport
-Title: Functions and Design Templates for Tirana Transportation Directorate
+Package: tirana
+Title: Functions and Design Templates for Tirana Municipality Directorate
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Eric",
            family = "Stemmler",
            role = c("aut", "cre"),
            email = "stemmler.eric@gmail.com")
-Description: This package delivers miscellaneaous useful functions and design templates for automatic and reproducible reporting to be used for working at Tirana Transportation and Road Traffic directorate. It containes a `xaringan` template and theme for creating interactive and easy to distribute `remark.js` slide shows.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: This package delivers miscellaneaous useful functions and design templates for automatic and reproducible reporting to be used for working at Tirana municipaltiy, especially at the Transportation and Road Traffic directorate. It containes a `xaringan` template and theme for creating interactive and easy to distribute `remark.js` slide shows.
+License: GPL (>= 3)
 Imports:
     xaringan,
     rmarkdown,
     knitr,
-    devtools
+    devtools,
+    qrencoder
+Remotes: hrbrmstr/qrencoder
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

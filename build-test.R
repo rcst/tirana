@@ -1,4 +1,5 @@
 rmarkdown::render(input = "inst/rmarkdown/templates/transport/skeleton/skeleton.Rmd")
+rmarkdown::render(input = "README.Rmd", output_file = "README.md") 
 
 devtools::document()
 devtools::load_all()
